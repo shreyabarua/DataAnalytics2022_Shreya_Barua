@@ -20,7 +20,10 @@ summary(abalone$rings)
 # and “old” for abalones older than 11.
 
 abalone$rings <- as.numeric(abalone$rings)
+View(abalone)
 abalone$rings<-cut(abalone$rings,br=c(-1,8,11,35), labels=c("young","adult","old"))
+help(cut)
+View(abalone)
 abalone$rings<-as.factor(abalone$rings)
 summary(abalone$rings)
 
